@@ -17,14 +17,11 @@ class TestShops:
     def test(self, driver):
         catalog_page = CatalogPage(driver, "https://testqastudio.me/")
         catalog_page.open()
-        catalog_page.product_catalog(driver)
+        catalog_page.test_sofa(driver)
 
-
-    # def test1(self, driver):
-    #     catalog_page = CatalogPage(driver, "https://testqastudio.me/")
-    #     catalog_page.open()
-    #     driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-    #     time.sleep(2)
-        # driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-        # time.sleep(2)
+    """ Добавление товара в избранное и удаление из избранного """
+    def test1(self, driver):
+        catalog_page = CatalogPage(driver, "https://testqastudio.me/")
+        catalog_page.open()
+        catalog_page.test_cabinet(driver)
 
