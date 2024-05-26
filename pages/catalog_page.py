@@ -46,7 +46,7 @@ class CatalogPage(BasePage):
         self.wait.until(EC.element_to_be_clickable(CatalogPage.FAVORITES_BUTTON)).click()  # Ждать пока иконка избранного не станет кликабельной
         self.element_is_visible(CatalogPage.BUTTON_REMOVE_FROM_FAVORITES).click()
         self.wait.until(EC.visibility_of_element_located(CatalogPage.PRODUCT_REMOVED_SUCCESSFULLY))  # Ждать пока текст об удалении не появится
-        assert self.driver.find_element(*CatalogPage.PRODUCT_REMOVED_SUCCESSFULLY).is_displayed()
+        assert self.driver.find_element(*CatalogPage.PRODUCT_REMOVED_SUCCESSFULLY).is_displayed()  # Проверяем появление элемента "Продукт успешно удален из избранного"
 
 
 
